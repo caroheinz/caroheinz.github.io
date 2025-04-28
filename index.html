@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap" rel="stylesheet">
     <title>Carolin Heinzler</title>
+    <base target="_blank">
     <style>
         * {
             margin: 0;
@@ -19,11 +20,18 @@
             align-items: center;
             height: 100vh;
             background-color: #ffffff;
+            flex-direction: column;
         }
         .container {
             display: flex;
             width: 60%;
             align-items: center;
+            margin: 0 auto;
+        }
+
+        .table-container {
+            margin-top: 20px;
+            width: 60%;
         }
 
         .info {
@@ -36,13 +44,40 @@
             color: #333;
             margin-bottom: 3px;
         }
+        .info h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 3px;
+        }
 
         .info p {
             font-size: 16px;
             color: #555;
             margin-bottom: 8px;
         }
+        th, td {
+            font-family: Lora, serif;
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 8px;
+            }
 
+        a.publication {
+            color: #000788;            
+            text-decoration: none; 
+            font-weight: bold;    
+        }
+        a {
+            color: #00288f;           
+            text-decoration: none;     
+        }
+
+       
+        .small-text {
+            font-size: 14px;   
+        }
+
+                
         .photo {
             width: 40%;
             display: flex;
@@ -50,7 +85,7 @@
             align-items: center;      /* Centers the image vertically */
         }
         .photo img {
-            width: 80%;
+            width: 100%;
             max-width: 200px;
             border-radius: 5px;
         }
@@ -62,17 +97,45 @@
         <div class="info">
             <h1>Carolin Heinzler</h1>
             <p> <a href="mailto:&#99;&#104;&#101;&#105;&#64;&#100;&#105;&#46;&#107;&#117;&#46;&#100;&#107;"> Email</a> | 
-            <a href="https://www.linkedin.com/in/carolin-heinzler-046879222/" target="_blank"> LinkedIn</a></p>
+            <a href="https://www.linkedin.com/in/carolin-heinzler-046879222/" > LinkedIn</a></p>
             <br>
             <p>I am a PhD fellow at the Machine Learning Section of the University of Copenhagen 
                 with a focus on <b>Unlearning</b>, <b>Robustness</b> and <b>Privacy</b>. 
-                I am supervised by Prof. <a href="https://amartya18x.github.io" target="_blank"> Amartya Sanyal</a> 
-                and Prof. <a href="https://amiryehudayoff.github.io/home/" target="_blank"> Amir Yehudayoff</a>.</p>
-</p>
+                I am supervised by Prof. <a href="https://amartya18x.github.io" > Amartya Sanyal</a> 
+                and Prof. <a href="https://amiryehudayoff.github.io/home/" > Amir Yehudayoff</a>.
+                <br><br>
+            </p>
         </div>
         <div class="photo">
             <img src="profile_pic.jpg" alt="Carolin Heinzler">
         </div>
+    </div>
+
+    <div class="table-container"> 
+        <h2> Research </h2>
+                
+                <table style="
+                width: 100%;
+                border: 0px;
+                border-spacing: 0px 10px;
+                border-collapse: separate;
+                margin: 0 auto;
+            ">
+            <tbody>
+                <tr>
+                <td style="padding: 16px; width: 20%; vertical-align: middle">
+                    Master's thesis
+                </td> 
+                <td style="padding: 8px; width: 80%; vertical-align: middle">
+                    <a href="https://arxiv.org/abs/2504.13966" class="publication"> Adversarial Resilience against Clean-Label Attacks in Realizable and Noisy Settings </a> <br>
+                    <b>Carolin Heinzler</b>, <a href="https://daniildmitriev.github.io/" > Daniil Dmitriev</a> | arXiv, 2024 <br>
+                    <p class="small-text"> We investigate the challenge of establishing stochastic-like guarantees when learning from a stream of i.i.d. with clean-label adversarial samples.
+                    Introducing the notion of a clean-label adversary in the agnostic context, we are the first to give a theoretical analysis of a disagreement-based learner for thresholds.</p>
+                </td>
+                </tr>
+                <!-- additional <tr> for each paper -->
+            </tbody>
+            </table>
     </div>
 
 </body>
