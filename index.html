@@ -43,6 +43,14 @@
             flex-direction: column;
         }
 
+        :root { --top-space: 60px; } /* tweak to taste */
+
+        html, body { height: auto; }           /* ensure no forced full-height */
+        body {
+        display: flex;                       
+        padding-top: calc(var(--top-space) + env(safe-area-inset-top, 0px)); /* handles iPhone notch */
+        }
+
         .container {
             display: flex;
             width: 60%;
@@ -139,7 +147,6 @@
             font-size: 14px;   
         }
 
-                
         .photo {
             width: 40%;
             display: flex;
@@ -150,6 +157,19 @@
             width: 100%;
             max-width: 200px;
             border-radius: 5px;
+        }
+
+        /* On small screens */
+        @media (max-width: 768px) {
+        .photo {
+            width: 100%;
+            margin-top: 20px;  /* add spacing below text */
+            display: flex;
+            justify-content: center;
+        }
+        .photo img {
+            max-width: 160px;  /* smaller portrait size on phones */
+        }
         }
  
     </style>
